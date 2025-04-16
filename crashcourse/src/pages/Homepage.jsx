@@ -25,7 +25,7 @@ function HomePage() {
         // Make a GET request to FastAPI backend to fetch user data
         const response = await axios.get("http://127.0.0.1:8000/auth/user", {
           headers: {
-            Authorization: Bearer ${token}, // Attach token in Authorization header
+            Authorization: `Bearer ${token}`, // Attach token in Authorization header
           },
         });
 

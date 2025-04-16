@@ -11,7 +11,7 @@ const Welcomepage = () => {
     <div className="flex h-screen items-center justify-center bg-gray-950">
       {/* Main Container with Dynamic Height */}
       <motion.div
-        className={flex w-[850px] bg-gray-800 shadow-lg rounded-2xl overflow-hidden border border-cyan-500}
+        className="flex w-[850px] bg-gray-800 shadow-lg rounded-2xl overflow-hidden border border-cyan-500"
         style={{ height: isSignIn ? "550px" : "550px" }} // Dynamically adjust height
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,11 @@ const Welcomepage = () => {
             {/* Sign In / Sign Up Tabs */}
             <div className="flex justify-center gap-6 text-white text-lg mb-6">
               <motion.button
-                className={pb-2 ${isSignIn ? "border-b-2 border-cyan-400" : "hover:text-cyan-400"}}
+                className={`pb-2 ${
+                  isSignIn
+                    ? "border-b-2 border-cyan-400"
+                    : "hover:text-cyan-400"
+                }`}
                 onClick={() => setIsSignIn(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -53,7 +57,11 @@ const Welcomepage = () => {
                 Sign In
               </motion.button>
               <motion.button
-                className={pb-2 ${!isSignIn ? "border-b-2 border-cyan-400" : "hover:text-cyan-400"}}
+                className={`pb-2 ${
+                  !isSignIn
+                    ? "border-b-2 border-cyan-400"
+                    : "hover:text-cyan-400"
+                }`}
                 onClick={() => setIsSignIn(false)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
